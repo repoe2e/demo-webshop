@@ -37,4 +37,10 @@ pipeline {
       }
     }
   }
+
+  post {
+    always {
+      archiveArtifacts artifacts: 'target/evidencias/**/*.png', fingerprint: true
+    }
+  }
 }
