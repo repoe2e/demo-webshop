@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   tools {
-    jdk 'JAVA_HOME'           // Nome configurado no Jenkins
-    maven 'MAVEN_HOME'   // Nome configurado no Jenkins
+    jdk 'JAVA_HOME'
+    maven 'MAVEN_HOME'
   }
 
   parameters {
@@ -23,7 +23,7 @@ pipeline {
 
     stage('Executar testes') {
       steps {
-        sh 'mvn clean test -Dtest=runner.RunCucumberTest'
+        bat 'mvn clean test -Dtest=runner.RunCucumberTest'
       }
     }
 
