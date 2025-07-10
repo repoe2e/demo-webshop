@@ -59,7 +59,7 @@ cd professor_demoshop
 Execute os testes:
 
 ```bash
-mvn clean test
+mvn clean test "-Dcucumber.filter.tags=<@NomeDaTAG>" 
 ```
 
 As evidências serão geradas automaticamente em: `target/evidencias/`
