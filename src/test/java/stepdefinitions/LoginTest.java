@@ -8,6 +8,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import pages.HomePage;
+import utils.ScreenshotUtil;
 
 public class LoginTest {
 
@@ -31,11 +32,13 @@ public class LoginTest {
 	@Quando("enviar os dados {string} e {string} corretamente")
 	public void enviar_os_dados_e_corretamente(String email, String passoword) {
 		home.login(email, passoword);
+		ScreenshotUtil.screenShot(driver, "Login", "loginSucesso");	
 	}
 
 	@Então("então valida o {string} logado")
 	public void então_valida_o_logado(String email) {
 		home.validaLogin(email);
+		ScreenshotUtil.screenShot(driver, "Login", "validacao");	
 	}
 
 	@Quando("enviar os dados {string} e {string} incorretamente")
