@@ -1,9 +1,9 @@
 package stepdefinitions;
 
-import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.WebDriver;
 
 import drivers.Drivers;
+import io.cucumber.java.After;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
@@ -15,7 +15,7 @@ public class LoginTest {
 	private WebDriver driver;
 	private HomePage home;
 	
-	@AfterEach
+	@After
 	public void tearDown() {
 		if(driver != null) {
 			driver.quit();
