@@ -39,14 +39,14 @@ pipeline {
   }
 
   post {
-  always {
-    script {
-      try {
-        archiveArtifacts artifacts: 'target/evidencias/**/*.png', fingerprint: true
-      } catch (Exception e) {
-        echo "Nenhum screenshot encontrado para arquivar."
+    always {
+      script {
+        try {
+          archiveArtifacts artifacts: 'target/evidencias/**/*.png', fingerprint: true
+        } catch (err) {
+          echo "Nenhuma evidência encontrada para arquivar."
+        }
       }
     }
   }
 }
-
