@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   tools {
-    jdk 'JDK17'           // Nome configurado no Jenkins
-    maven 'Maven 3.9.6'   // Nome configurado no Jenkins
+    jdk 'JAVA_HOME'           // Nome configurado no Jenkins
+    maven 'MAVEN_HOME'   // Nome configurado no Jenkins
   }
 
   parameters {
